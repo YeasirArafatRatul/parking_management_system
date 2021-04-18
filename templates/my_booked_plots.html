@@ -1,0 +1,74 @@
+{% extends "base.html" %} {% load custom_template_tags %} {% block title %}
+Booked Plots - {{ block.super }} {% endblock title %} {% block content %}
+<section id="showcase-inner" class="py-5 text-white">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h1 class="display-6">Browse All Booked Plots</h1>
+        <p class="lead">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt,
+          pariatur!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="plots" class="py-4">
+  <div class="container">
+    <div class="row">
+      {% if booked_plots %} {% for plot in booked_plots %}
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card listing-preview">
+          <img
+            class="card-img-top"
+            src="https://blissaquaworldresort.com/uploads/images/Innerpage/planavisit/cr.jpg"
+            alt=""
+          />
+          <div class="card-img-overlay">
+            <h2>
+              <span class="badge badge-primary text-white">{% show_price plot.plot_no.plot_type %} {% show_currency plot.plot_no.plot_type %}</span>
+            </h2>
+          </div>
+          <div class="card-body">
+            <div class="listing-heading text-center">
+              <h4 class="text-primary">{{ plot.plot_no.plot_type | upper  }}   Wheelar</h4>
+              <p>
+                <i class="fas fa-map-marker text-primary"></i>
+                <!--  -->
+                Floor: {{ plot.plot_no.floor | adder }} 
+              </p>
+            </div>
+            <hr />
+            <div class="row py-2 text-primary">
+              <div class="col-6">
+                <i class="fas fa-th-large"></i> {{ plot.plot_no.plot_no | adder }}  No.
+                Plot
+              </div>
+              <div class="col-6">
+                <i class="fas fa-car"></i> {{ plot.plot_no.block }} Block
+              </div>
+            </div>
+
+            <hr />
+            <a  href="{% url 'parking:go-to-exit' plot.id %}" ><button style="position: relative" type="button"
+              class="btn btn-primary btn-block">Exit</button></a>
+             
+            <!-- <a
+              href="{% url 'parking:exit' plot.id plot.id %}"
+              class="btn btn-primary btn-block"
+              >Exit</a
+            > -->
+          </div>
+        </div>
+      </div>
+      {% endfor %} {% else %}
+      <div class="col-md-12">
+        <p>No Booked Plots Available</p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+
+{% endblock content %}

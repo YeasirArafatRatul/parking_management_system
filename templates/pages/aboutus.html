@@ -1,0 +1,60 @@
+{% extends "base.html" %} {% load static %}
+
+<!--  -->
+{% block title %} About - {{ block.super }} {% endblock title %}
+<!--  -->
+{% block styles %} {% endblock styles %}
+<!--  -->
+{% block content %}
+<section id="showcase-inner" class="py-5 text-white">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h1 class="display-6">About Us</h1>
+        <p class="lead">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt,
+          pariatur!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h2>We For The Perfect</h2>
+        <p class="lead">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt,
+          pariatur!
+        </p>
+        <img src="{% static 'img/image-intro-desktop.jpg' %}" alt="" />
+        <p class="mt-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+          esse officia repudiandae ad saepe ex, amet neque quod accusamus rem
+          quia magnam magni dolorum facilis ullam minima perferendis?
+          Exercitationem at quaerat commodi id libero eveniet harum perferendis
+          laborum molestias quia.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Work -->
+<section id="work" class="bg-dark text-white text-center">
+  <h2 class="display-5">We Work For You</h2>
+  <h5>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit
+    aperiam, unde aliquid at similique!
+  </h5>
+  <hr />
+  <a
+    href="{% url 'pages:contactus' %}"
+    class="btn btn-secondary text-white btn-lg"
+    >Contact Us</a
+  >
+</section>
+
+{% endblock content %}

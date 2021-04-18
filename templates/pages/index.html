@@ -1,0 +1,226 @@
+{% extends "base.html" %} {% load static %}
+
+<!--  -->
+{% block title %} Welcome - {{ block.super }} {% endblock title %}
+<!--  -->
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/testimonials.css' %}" />
+{% endblock styles %}
+<!--  -->
+{% block content %}
+<!-- Alerts -->
+{% include "partials/_alerts.html" %}
+<section id="showcase">
+  <div class="container text-center">
+    <div class="home-search p-5">
+      <div class="overlay p-5">
+        <h1 class="display-4 mb-4">We Have The Best Deals For Parking Lots!</h1>
+        <p class="lead">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae
+          quas, asperiores eveniet vel nostrum magnam voluptatum tempore!
+          Consectetur, id commodi!
+        </p>
+      </div>
+    </div>
+  </div>
+  <video loop muted autoplay playsinline>
+    <source src="{% static 'video/gmp-video-720.mp4' %}" type="video/mp4" />
+  </video>
+</section>
+
+<section id="services" class="py-5 bg-secondary text-white">
+  <div class="container">
+    <h2
+      style="position: relative"
+      class="display-5 text-center mb-4 font-weight-bold"
+    >
+      Why Choose Us?
+    </h2>
+
+    <div class="row text-center">
+      <div class="col-md-4">
+        <i class="fas fa-money-check-alt fa-4x mr-4"></i>
+        <hr />
+        <h3>Save Money</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+          debitis nam! Repudiandae, provident iste consequatur hic dignissimos
+          ratione ea quae.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-clock fa-4x mr-4"></i>
+        <hr />
+        <h3>Save Time</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+          debitis nam! Repudiandae, provident iste consequatur hic dignissimos
+          ratione ea quae.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-thumbs-up fa-4x mr-4"></i>
+        <hr />
+        <h3>Save Stress</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+          debitis nam! Repudiandae, provident iste consequatur hic dignissimos
+          ratione ea quae.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="py-5">
+  <h3
+    style="position: relative"
+    class="display-5 d-block text-center mb-4 font-weight-bold"
+  >
+    What Our Customers Say
+  </h3>
+  <div class="testimonials">
+    <article class="card card--wide card--violet">
+      <div class="card__header">
+        <img
+          class="card__reviewer-pic"
+          src="{% static 'img/user.png' %}"
+          alt="Daniel Clifford picture"
+        />
+        <h5>Daniel Clifford</h5>
+        <h6>Chittagong</h6>
+      </div>
+      <div class="card__body">
+        <p class="card__intro">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima
+          fugiat vero velit distinctio ratione voluptatem est accusantium nobis
+          animi!
+        </p>
+        <p class="card__review">
+          “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+          deserunt illo cumque laudantium est ea, dicta assumenda voluptatem
+          veritatis maxime? Qui consequatur placeat harum non eveniet quis,
+          molestias fuga sunt ipsum perferendis laborum ducimus numquam aliquid
+          alias magni nostrum natus! Sunt sapiente repellat, facilis in mollitia
+          doloribus asperiores quaerat enim? ”
+        </p>
+      </div>
+    </article>
+
+    <atricle class="card card--gray">
+      <div class="card__header">
+        <img
+          class="card__reviewer-pic"
+          src="{% static 'img/user.png' %}"
+          alt="Jonathan Walters picture"
+        />
+        <h5>Jonathan Walters</h5>
+        <h6>Chittagong</h6>
+      </div>
+      <div class="card__body">
+        <p class="card__intro">
+          The team was very supportive and kept me motivated
+        </p>
+        <p class="card__review">
+          “ Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+          unde, ducimus natus sapiente sunt in autem eveniet omnis consectetur
+          iste. ”
+        </p>
+      </div>
+    </atricle>
+
+    <article class="card card--long card--white">
+      <div class="card__header">
+        <img
+          class="card__reviewer-pic"
+          src="{% static 'img/user.png' %}"
+          alt="Kira Whittle picture"
+        />
+        <h5>Kira Whittle</h5>
+        <h6>Chittagong</h6>
+      </div>
+      <div class="card__body">
+        <p class="card__intro">
+          Such a life-changing experience. Highly recommended!
+        </p>
+        <p class="card__review">
+          “ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
+          est laboriosam nesciunt modi repellendus repellat facilis, odio,
+          perspiciatis dolores odit veniam id deserunt. Omnis perferendis, iure
+          nisi beatae explicabo in numquam doloremque accusantium eius hic error
+          nulla a, cum molestiae ipsa autem quasi natus corrupti ipsum.
+          Laudantium qui distinctio adipisci harum, earum delectus vitae ut esse
+          omnis deleniti ratione recusandae? ”
+        </p>
+      </div>
+    </article>
+
+    <article class="card card--white">
+      <div class="card__header">
+        <img
+          class="card__reviewer-pic"
+          src="{% static 'img/user.png' %}"
+          alt="Jeanette Harmon picture"
+        />
+        <h5>Jeanette Harmon</h5>
+        <h6>Chittagong</h6>
+      </div>
+      <div class="card__body">
+        <p class="card__intro">An overall wonderful and rewarding experience</p>
+        <p class="card__review">
+          “ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
+          minima officiis nulla eum esse blanditiis, saepe animi dolore corporis
+          modi ipsa iure, repellat inventore nemo qui aut, officia nobis neque.
+          ”
+        </p>
+      </div>
+    </article>
+    <article class="card card--white">
+      <div class="card__header">
+        <img
+          class="card__reviewer-pic"
+          src="{% static 'img/user.png' %}"
+          alt="Jeanette Harmon picture"
+        />
+        <h5>Jeanette Harmon</h5>
+        <h6>Chittagong</h6>
+      </div>
+      <div class="card__body">
+        <p class="card__intro">An overall wonderful and rewarding experience</p>
+        <p class="card__review">
+          “ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
+          minima officiis nulla eum esse blanditiis, saepe animi dolore corporis
+          modi ipsa iure, repellat inventore nemo qui aut, officia nobis neque.
+          ”
+        </p>
+      </div>
+    </article>
+
+    <article class="card card--wide card--black">
+      <div class="card__header">
+        <img
+          class="card__reviewer-pic"
+          src="{% static 'img/user.png' %}"
+          alt="Patrick Abrams picture"
+        />
+        <h5>Patrick Abrams</h5>
+        <h6>Chittagong</h6>
+      </div>
+      <div class="card__body">
+        <p class="card__intro">
+          “I absolutely adore this awesome service, because it is vital to have
+          a guaranteed parking spot whenever you need it! Thank you so much and
+          good luck in the future!”
+        </p>
+        <p class="card__review">
+          “ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
+          ex autem quis suscipit tempore temporibus vero voluptates modi quas
+          ad, minus dolorem molestiae repellendus iure velit quibusdam ea quos.
+          Consequuntur iste neque labore. Ea natus reiciendis minus voluptates
+          provident enim dolore nesciunt debitis numquam aspernatur? ”
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+{% endblock content %}
